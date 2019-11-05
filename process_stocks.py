@@ -1,16 +1,21 @@
 import pandas as pd
-import os, requests, re
+import os, requests, re, time
 from bs4 import BeautifulSoup
 
-os.chdir('C:\\Users\\212587697\\Box Sync\\Personal\\Finance Analysis')
+os.chdir('C:\\Users\\antonio.coelho\\codigos\\stock_analysis')
 
 def stock_details(stock):
 
     detalhes = dict()
+    # stock = 'KROT3'
 
     res = requests.get('https://www.fundamentus.com.br/detalhes.php?papel={0}'.format(stock))
     soup = BeautifulSoup(res.text, 'html.parser')
     table_rows = soup.findAll('tr')
+
+    # Verificamos se retornou alguma coisa, caso não, é um empty dataframe
+    if len(table_rows) <= 2:
+        return detalhes
 
     # Dados Gerais
     detalhes['cotacao_dia'] = table_rows[0].findAll('td')[3].span.text
@@ -87,7 +92,7 @@ def limpa_dataframe():
 
     return stock_list
 
-def _filtra_stocks(stocks):
+def _filtra_stocks(stock_list):
 
     """
     Return [0] - All except BDR
@@ -120,17 +125,40 @@ if __name__ == '__main__':
     stock_list = limpa_dataframe()
 
     # Verificar quais são as classificadas como NA
-    stock_list[stock_list['TIPO_ACAO'].isna()]
+    stock_list = stock_list[~stock_list['TIPO_ACAO'].isna()]
 
-    stock_list = _filtra_stocks()
+    # Tiramos BDR
+    stock_list = _filtra_stocks(stock_list)
+
+    # DataFrame de controle
     stocks_detailed = pd.DataFrame()
 
-    stock_list[stock_list['CODIGO'] == 'PETR']
+    # Pegamos os detalhes para todos os códigos da B3
+    for _ticker in stock_list['CODIGO']:
+        print(_ticker)
+        if _ticker in lista:
+            print(_ticker)
 
-    _details = stock_details('PETR4')
-    _details['CODIGO'] = 'PETR'
+            # Como não sabemos se é 3 ou 4, tentamos os 2 para todas as ações
+            _ticket_to_test = _ticker + '3'
+            _details = stock_details(_ticket_to_test)
+            _details['CODIGO'] = _ticket_to_test
+            stocks_detailed = stocks_detailed.append(_details, ignore_index=True)
+            time.sleep(5)
 
-    stocks_detailed.append(_details, ignore_index=True)
+            _ticket_to_test = _ticker + '4'
+            _details = stock_details(_ticket_to_test)
+            _details['CODIGO'] = _ticket_to_test
+            stocks_detailed = stocks_detailed.append(_details, ignore_index=True)
+            time.sleep(5)
 
-    # https://queroficarrico.com/blog/ferramentas-gratuitas-para-analise-fundamentalista/
-    # https://www.fundamentus.com.br/detalhes.php?papel=PETR3
+            print('-- Finalizado processamento para {0} --'.format(_ticker))
+
+
+    stocks_detailed = stocks_detailed[~stocks_detailed['cotacao_dia'].isna()]
+
+# pendentes = stock_list[~stock_list['CODIGO'].isin(stocks_detailed['SOURCE'])]['CODIGO']
+# stocks_detailed['SOURCE'] = stocks_detailed.apply(lambda row: row['CODIGO'][:-1:], axis=1)
+
+# https://queroficarrico.com/blog/ferramentas-gratuitas-para-analise-fundamentalista/
+# https://www.fundamentus.com.br/detalhes.php?papel=PETR3

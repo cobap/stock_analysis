@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 # ML Libraries
 from sklearn.cluster import KMeans
 
-os.chdir('C:\\Users\\antonio.coelho\\codigos\\stock_analysis')
+os.chdir('C:\\Users\\Antonio Coelho\\Codigos\\stock_analysis')
 
 def stock_details(stock):
 
@@ -180,7 +180,13 @@ def recupera_dados_stock(nome_arquivo):
     for _ticker in stock_list['CODIGO']:
 
         # Como não sabemos se é 3 ou 4, tentamos os 2 para todas as ações
-        _ticket_to_test = _ticker + '3'
+        _ticket_to_test = _ticker + '11'
+        _details = stock_details(_ticket_to_test)
+        _details['CODIGO'] = _ticket_to_test
+        stocks_detailed = stocks_detailed.append(_details, ignore_index=True)
+        time.sleep(3)
+
+        _ticket_to_test = _ticker + '6'
         _details = stock_details(_ticket_to_test)
         _details['CODIGO'] = _ticket_to_test
         stocks_detailed = stocks_detailed.append(_details, ignore_index=True)
@@ -192,7 +198,13 @@ def recupera_dados_stock(nome_arquivo):
         stocks_detailed = stocks_detailed.append(_details, ignore_index=True)
         time.sleep(3)
 
-        print('-- Finalizado processamento para {0} --'.format(_ticker))
+        _ticket_to_test = _ticker + '3'
+        _details = stock_details(_ticket_to_test)
+        _details['CODIGO'] = _ticket_to_test
+        stocks_detailed = stocks_detailed.append(_details, ignore_index=True)
+        time.sleep(3)
+
+        print('-- Iniciando processamento para {0} --'.format(_ticker))
 
     print('Finalizado processamento total')
 
@@ -221,7 +233,11 @@ def _transform_comma_topoint(nome_coluna):
 
     return nome_coluna
 
+
 if __name__ == '__main__':
+
+    recupera_dados_stock('detalhes_stock_20200428.xlsx')
+
 
     columns_name = [
         'Index', 'CODIGO', 'cotacao_dia', 'crescimento_receita (%)', 'dividabruta_patrimonio', 'dividend_yeild (%)', 'ebit_ativo (%)', 'enterprise_value',

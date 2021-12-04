@@ -1,0 +1,54 @@
+Empresa		Segmento	Valor mercado	Lucro 12m
+ITSA	Itaúsa	Bancos	91.005.018.300	7.122.000.000
+VIVT3	Telefônica	Telecomunicações	81.826.764.150	4.751.991.000
+B3SA3	B3	Serviços financeiros diversos	128.572.576.720	3.786.307.000
+CPFE3	CPFL	Energia elétrica	38.174.175.020	3.574.449.000
+EQTL3	Equatorial Energia	Energia elétrica	23.559.869.520	3.268.787.000
+SULA	SulAmérica	Seguradoras	15.600.602.130	2.757.648.000
+NEOE3	Neoenergia	Energia Elétrica	23.086.418.940	2.453.330.000
+TRPL	CTEEP	Energia elétrica	17.150.724.490	2.304.190.000
+WEGE3	WEG	Motores, compressores e outros	179.582.165.060	2.138.552.000
+ENGI	Energisa	Energia Elétrica	18.421.423.270	1.768.758.000
+TAEE11	Taesa	Energia Elétrica	11.416.696.860	1.611.418.000
+ENBR3	EDP	Energia elétrica	12.037.052.300	1.439.398.000
+ALUP	Alupar	Energia elétrica	7.531.050.900	1.370.952.000
+LREN3	Lojas Renner	Tecidos, vestuário e calçados	32.889.690.600	1.258.695.000
+SAPR	Sanepar	Água e Saneamento	6.585.831.390	1.091.312.000
+MULT3	Multiplan	Exploração de Imóveis	13.294.818.800	959.408.000
+SMTO3	São Martinho	Açúcar e Álcool	10.694.672.310	933.165.000
+RENT3	Localiza	Aluguel de carros	52.789.303.200	874.717.000
+MDIA3	M. Dias Branco	Alimentos diversos	10.525.950.000	819.618.000
+WHRL	Whirlpool	Eletrodomésticos	11.721.723.000	610.476.000
+MRVE3	MRV	Edificações	9.629.440.920	570.986.000
+CIEL3	Cielo	Serviços financeiros diversos	11.220.445.950	490.249.000
+DTEX3	Duratex	Madeira	14.368.374.450	437.084.000
+RADL3	Raia Drogasil	Medicamentos e outros produtos	41.100.018.400	420.196.000
+SLCE3	SLC Agrícola	Agricultura	7.023.425.750	405.444.000
+EZTC3	EZ Tec	Edificações	8.773.550.000	381.967.000
+TIET	AES Tietê	Energia Elétrica	6.704.987.520	350.979.000
+ODPV3	Odontoprev	Serviços médico-hospitalares, análises e diag	7.469.993.640	346.746.000
+ENAT3	Enauta	Exploração, refino e distribuição	3.218.910.660	346.140.000
+GRND3	Grendene	Calçados	6.964.675.200	306.336.000
+ALSO3	Aliansce Sonae	Exploração de imóveis	7.707.765.000	280.575.000
+YDUQ3	YDUQS	Serviços educacionais	10.323.572.600	258.881.000
+TOTS3	Totvs	Programas e serviços	17.175.574.360	252.718.000
+IGTA3	Iguatemi	Exploração de imóveis	6.292.649.930	232.129.000
+UGPA3	Ultrapar	Exploração, refino e distribuição	25.988.738.580	228.530.000
+WIZS3	Wiz Soluções	Corretoras de Seguros	1.300.043.910	216.736.000
+ALPA	Alpargatas	Calçados	24.110.542.000	190.940.000
+FLRY3	Fleury	Serviços médico-hospitalares, análises e diag	8.854.224.600	173.553.000
+CCPR3	Cyrela Properties	Exploração de Imóveis	2.156.388.840	151.630.000
+LOGG3	Log CP	Exploração de Imóveis	3.449.909.430	146.693.000
+CGRA	Grazziotin	Tecidos. Vestuário e Calçados	733.650.000	136.242.000
+EUCA	Eucatex	Madeira	693.716.310	126.306.000
+PTBL3	Portobello	Produtos para Construção	1.537.812.120	102.545.000
+WSON33	Wilson Sons	Serviços de Apoio e Armazenagem	3.281.787.460	99.521.000
+SCAR3	São Carlos	Exploração de Imóveis	2.366.639.630	86.814.000
+LEVE3	Mahle Metal Leve	Automóveis e Motocicletas	2.485.325.960	85.928.000
+SHUL4	Schulz	Motores . Compressores e Outros	1.223.999.100	81.146.000
+PNVL	Panvel	Medicamentos e Outros Produtos	2.850.499.200	56.136.000
+FRAS3	Fras le	Material Rodoviário	2.545.522.200	48.958.000
+MTSA4	Metisa	Máq. e Equip. Construção e Agrícolas	280.962.750	48.504.000
+CARD3	CSU Cardsystem	Serviços Diversos	652.916.000	42.403.000
+SEER3	Ser Educacional	Serviços Educacionais	1.948.835.940	40.941.000
+FESA4	Ferbasa	Siderurgia	1.922.726.400	31.515.000

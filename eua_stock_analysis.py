@@ -1,14 +1,14 @@
 """
 Análise dos fundamentos das empresas dos EUA
 """
-
 import requests
+token = '?apikey=d297cd796ed9bda6081954060cb42e92'
 
 """
 Informações básicas como setor, CEO, etc
 """
 def get_company_details(ticker='AAPL'):
-    url = 'https://financialmodelingprep.com/api/v3/company/profile/{0}'.format(ticker)
+    url = 'https://financialmodelingprep.com/api/v3/company/profile/{0}{1}'.format(ticker, token)
     return requests.get(url).json()
 
 
@@ -78,14 +78,3 @@ def get_company_dcf(ticker, quarter=False, historical=False):
         url = url + '?period=quarter'
 
     requests.get(url).json()
-
-
-
-
-
-
-
-for _result in get_enterprise_value('AAPL')['enterpriseValues']:
-    print(_result['date'])
-
-get_company_growth_results('AAPL')

@@ -94,8 +94,7 @@ resultados = []
 if status:
 
     for ticker in tickers.tickers.values:
-        resultado = get_acao_us(ticker)
-        if resultado:
+        if resultado := get_acao_us(ticker):
             resultado = list(resultado)
             resultado.append(ticker)
             resultados.append(resultado)
